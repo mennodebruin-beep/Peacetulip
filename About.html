@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About - Peacetulip</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:20%">
+    <div style="text-align: center;">
+      <a href="index.html" class="w3-bar-item">
+        <img src="images/peacetulip-logo.png" alt="Peacetulip logo" style="width:120px; height:auto;">
+      </a>
+    </div><br>
+    <a href="Home.html" class="w3-bar-item w3-button"><strong>Home</strong></a>
+    <a href="About.html" class="w3-bar-item w3-button"><strong>About</strong></a>
+    <a href="Mission&Vision.html" class="w3-bar-item w3-button"><strong>Mission and Vision</strong></a>
+    <a href="Guiding Values.html" class="w3-bar-item w3-button"><strong>Guiding Values</strong></a>
+    <a href="Educational Materials.html" class="w3-bar-item w3-button"><strong>Educational Materials</strong></a>
+    <a href="Educational Examples.html" class="w3-bar-item w3-button"><strong>Educational Examples</strong></a>
+    <a href="Product Ideas.html" class="w3-bar-item w3-button"><strong>Product Ideas</strong></a>
+    <a href="Websites.html" class="w3-bar-item w3-button"><strong>Websites</strong></a>
+    <a href="Education at Peacetulip.html" class="w3-bar-item w3-button"><strong>Peacetulip and Education</strong></a>
+    <a href="Contact.html" class="w3-bar-item w3-button"><strong>Contact</strong></a>
+    <a href="Blog.html" class="w3-bar-item w3-button"><strong>Wordpress blog</strong></a>
+  </div>
+
+  <!-- Language Switch -->
+  <div class="language-switch" style="margin-left:20%; padding:10px;">
+    <button onclick="setLanguage('en')">English</button> | 
+    <button onclick="setLanguage('nl')">Nederlands</button>
+  </div>
+
+  <!-- Page Content -->
+  <div style="margin-left:20%">
+    <div class="w3-container w3-teal header-title">
+      <h1 data-i18n="about_title"><i class="fas fa-users"></i> About</h1>
+    </div>
+
+    <div class="w3-container"><br>
+      <p data-i18n="into_line1"></p>
+      <p data-i18n="values_list"></p>
+      <p data-i18n="practice_title"></p>
+      <p data-i18n="practice_text"></p>
+    </div>
+
+    <footer>
+    <div class="footer-container"><br>
+        <div style="margin-left:1.5%">
+            <div class="footer-text">
+                <p>Peacetulip is seated in The Hague.<br>
+                    <a href="https://www.denhaag.nl/en/international-the-hague/international-city-of-peace-and-justice/" 
+                       target="_blank" 
+                       style="color:#0066cc; text-decoration:none;">
+                       The Hague is the city of Peace and Justice
+                    </a></p>
+                <img src="images/The Hague logo.png" alt="Logo Den Haag" class="footer-logo">
+            </div>
+        </div>
+    </div>
+</footer>
+  </div>
+
+  <!-- Translation Script -->
+  <script>
+    const translations = {
+      en: {
+        about_title: "About",
+        into_line1: "Peacetulip is an educational initiative that explores how to create social enterprises rooted in:",
+        values_list: "<ul><li>justice</li><li>cultural understanding</li><li>spiritual and philosophical harmony</li><li>education as empowerment</li><li>sustainance and environment</li></ul>",
+        practice_title: "Our goal is not to offer ready-made solutions, but to invite exploration:",
+        practice_text: "What does it mean to build a business that serves the common good and not just in one country, but across cultures and belief systems? Through Peacetulip.org we provide a framework and inspiration to those who want to walk this path. This is a slowly unfolding, open-source journey, one that grows with every contribution. We welcome thinkers, doers, and dreamers who wish to contribute.",
+        footer_line1: "Peacetulip is seated in The Hague.",
+        footer_line3: "The Hague is the city of Peace and Justice"
+      },
+      nl: {
+        about_title: "Over",
+        into_line1: "Peacetulip is een onderwijsinitiatief dat onderzoekt hoe je sociale ondernemingen kunt creëren die geworteld zijn in:",
+        values_list: "<ul><li>rechtvaardigheid</li><li>cultureel begrip</li><li>spirituele en filosofische harmonie</li><li>onderwijs als empowerment</li><li>duurzaamheid en milieu</li></ul>",
+        practice_title: "Ons doel is niet om kant-en-klare oplossingen te bieden, maar om uit te nodigen tot verkenning:",
+        practice_text: "Wat betekent het om een bedrijf op te bouwen dat het algemeen belang dient – niet alleen in één land, maar over culturen en geloofssystemen heen? Via Peacetulip.org bieden we een kader en inspiratie voor diegenen die dit pad willen bewandelen. Dit is een zich langzaam ontvouwende, open-source reis die groeit met elke bijdrage. We verwelkomen denkers, doeners en dromers die willen bijdragen.",
+        footer_line1: "Peacetulip is gevestigd in Den Haag.",
+        footer_line2: "KvK nr. 86219510",
+        footer_line3: "Den Haag is de stad van Vrede en Recht"
+      }
+    };
+
+    function setLanguage(lang) {
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        el.innerHTML = translations[lang][key] || `[${key}]`;
+      });
+    }
+
+    // Initial language
+    setLanguage('en');
+  </script>
+
+</body>
+</html>
