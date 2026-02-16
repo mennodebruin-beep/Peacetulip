@@ -141,3 +141,61 @@ tr:nth-child(even) {
   }
 }
 
+/* Sidebar */
+.sidebar {
+  width: 20%;
+  background-color: #f0f0f0;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  z-index: 2;
+}
+
+/* Logo in sidebar */
+.sidebar img.logo {
+  max-width: 90%;      /* past zich automatisch aan aan de kolombreedte */
+  min-width: 80px;     /* nooit kleiner dan 80px */
+  height: auto;        /* behoudt verhoudingen */
+  display: block;
+  margin: 0 auto 20px; /* center + ruimte onder logo */
+}
+
+/* Sidebar links */
+.sidebar nav a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.sidebar nav a:hover {
+  background-color: #ddd;
+  text-decoration: underline;
+}
+
+/* Responsive voor mobiel / tablet */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .sidebar img.logo {
+    max-width: 50%; /* logo schaalt kleiner op mobiel */
+  }
+
+  .sidebar nav a {
+    display: inline-block;
+    margin: 5px 10px;
+    font-size: 1em;
+  }
+}
