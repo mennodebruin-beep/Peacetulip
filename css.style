@@ -1,125 +1,88 @@
-/* Basis */
+/* 1. BASIS INSTELLINGEN */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
+  color: #333;
 }
 
-/* Sidebar */
+/* 2. SIDEBAR (De linkerkolom) */
 .sidebar {
-  width: 20%;
+  width: 20%;            /* De breedte is nu 20% van je scherm */
+  min-width: 200px;      /* Zorgt dat de kolom nooit té smal wordt voor het logo */
+  background-color: #f0f0f0;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  z-index: 2;
 }
 
-.logo {
-  text-align: center;
-  margin: 20px 0;
+/* 3. LOGO STYLING */
+.sidebar .logo img {
+  max-width: 90%;      /* Vult de sidebar netjes op */
+  height: auto;
+  display: block;
+  margin: 0 auto 20px; /* Centreert het logo en geeft ruimte eronder */
 }
 
-.logo img {
-  width: 120px;
+/* 4. NAVIGATIE LINKS */
+.sidebar nav a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1em;
+  font-weight: bold;
 }
 
-/* Hoofdinhoud */
+.sidebar nav a:hover {
+  background-color: #ddd;
+  text-decoration: underline;
+}
+
+/* 5. HOOFDINHOUD (Rechterkant) */
 .main-content {
-  margin-left: 20%;
+  margin-left: 22%;    /* Iets meer dan de 20% van de sidebar voor ademruimte */
+  padding: 20px;
 }
 
 .page-header h1 {
-  margin: 0;
+  margin: 0 0 20px 0;
 }
 
-/* Lijsten */
-.values-list {
-  margin-left: 20px;
+/* 6. TABELLEN EN LIJSTEN */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
 }
 
-/* Footer */
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* 7. FOOTER */
 .footer {
   margin-top: 40px;
   padding: 20px;
   font-size: 0.9em;
+  border-top: 1px solid #eee;
 }
 
-.footer img {
-  width: 120px;
-  margin-top: 10px;
-}
-table, th, td {
-  border: 1px solid #ddd; /* Dunne, grijze randen */
-  border-collapse: collapse; /* Randen laten overlappen */
-}
-th, td {
-  padding: 8px; /* Ruimte binnen de cel */
-  text-align: left; /* Tekst links uitlijnen */
-}
-th {
-  background-color: #f2f2f2; /* Lichtgrijze achtergrond voor koppen */
-  font-weight: bold;
-}
-/* Alternerende rijkleuren voor betere leesbaarheid */
-tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-/* Sidebar logo */
-.sidebar img.logo {
-  max-width: 90%;      /* past zich aan aan de sidebar */
-  min-width: 80px;     /* nooit kleiner dan 80px */
-  height: auto;        /* behoudt verhoudingen */
-  display: block;
-  margin: 0 auto 20px; /* centreren + ruimte onder logo */
-}
-
-/* Mobiel */
-@media (max-width: 768px) {
-  .sidebar img.logo {
-    max-width: 50%;   /* logo schaalt kleiner op mobiel */
-  }
-}
-
-
-/* Responsive aanpassing voor mobiel */
-@media (max-width: 768px) {
-  .logo {
-    max-width: 50%;    /* kleiner op smalle schermen */
-  }
-}
-/* Sidebar + logo + links */
-.sidebar {
-  width: 20%;
-  background-color: #f0f0f0;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
-  z-index: 2;
-}
-
-/* Logo styling */
-.sidebar .logo img {
-  max-width: 90%;      /* past zich aan aan kolombreedte */
-  min-width: 80px;     /* nooit kleiner dan 80px */
-  height: auto;        /* behoudt verhouding */
-  display: block;
-  margin: 0 auto 20px; /* center en ruimte onder logo */
-}
-
-/* Sidebar links */
-.sidebar nav a {
-  display: block;
-  padding: 10px 20px;
-  text-decoration: none;
-  color: #333;
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
-.sidebar nav a:hover {
-  background-color: #ddd;
-  text-decoration: underline;
-}
-
-/* Responsive: mobiel / tablet */
+/* 8. MOBIEL (Responsive) */
 @media (max-width: 768px) {
   .sidebar {
     width: 100%;
@@ -127,75 +90,18 @@ tr:nth-child(even) {
     position: relative;
     padding: 10px 0;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .main-content {
+    margin-left: 0;
   }
 
   .sidebar .logo img {
-    max-width: 50%;  /* logo wordt kleiner op mobiel */
+    max-width: 150px; /* Logo blijft bescheiden op je telefoon */
   }
 
   .sidebar nav a {
     display: inline-block;
-    margin: 5px 10px;
-    font-size: 1em;
-  }
-}
-
-/* Sidebar */
-.sidebar {
-  width: 20%;
-  background-color: #f0f0f0;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
-  z-index: 2;
-}
-
-/* Logo in sidebar */
-.sidebar img.logo {
-  max-width: 90%;      /* past zich automatisch aan aan de kolombreedte */
-  min-width: 80px;     /* nooit kleiner dan 80px */
-  height: auto;        /* behoudt verhoudingen */
-  display: block;
-  margin: 0 auto 20px; /* center + ruimte onder logo */
-}
-
-/* Sidebar links */
-.sidebar nav a {
-  display: block;
-  padding: 10px 20px;
-  text-decoration: none;
-  color: #333;
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
-.sidebar nav a:hover {
-  background-color: #ddd;
-  text-decoration: underline;
-}
-
-/* Responsive voor mobiel / tablet */
-@media (max-width: 768px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-    padding: 10px 0;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-
-  .sidebar img.logo {
-    max-width: 50%; /* logo schaalt kleiner op mobiel */
-  }
-
-  .sidebar nav a {
-    display: inline-block;
-    margin: 5px 10px;
-    font-size: 1em;
+    margin: 5px;
   }
 }
