@@ -65,3 +65,9 @@ tr:nth-child(even) {
   display: block;
   margin: 0 auto;     /* centreert het logo horizontaal */
 }
+@media (max-width: 600px) {
+  .logo {
+    max-width: 150px;
+  }
+}
+
