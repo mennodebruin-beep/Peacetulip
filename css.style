@@ -21,7 +21,7 @@ body {
 
 /* 3. LOGO STYLING */
 .sidebar .logo {
-  width: 100%;    /* Zorgt dat de afbeelding de volledige breedte van de sidebar vult */
+  width: 50%;    /* Zorgt dat de afbeelding de volledige breedte van de sidebar vult */
   height: auto;   /* Behoudt de juiste verhoudingen van het logo */
   display: block; /* Voorkomt ongewenste witruimte onder de afbeelding */
   padding: 10px;  /* Optioneel: geeft het logo wat ademruimte aan de zijkanten */
