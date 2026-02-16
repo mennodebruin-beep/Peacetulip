@@ -21,7 +21,7 @@ body {
 
 /* 3. LOGO STYLING */
 .sidebar .logo img {
-  max-width: 90%;      /* Vult de sidebar netjes op */
+  max-width: 20%;      /* Vult de sidebar netjes op */
   height: auto;
   display: block;
   margin: 0 auto 20px; /* Centreert het logo en geeft ruimte eronder */
