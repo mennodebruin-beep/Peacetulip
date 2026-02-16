@@ -70,4 +70,19 @@ tr:nth-child(even) {
     max-width: 150px;
   }
 }
+/* Logo in sidebar */
+.logo {
+  max-width: 90%;      /* logo past zich aan aan kolombreedte */
+  min-width: 80px;     /* nooit kleiner dan 80px */
+  height: auto;        /* behoudt verhoudingen */
+  display: block;      
+  margin: 0 auto 20px; /* centreert en geeft wat ruimte eronder */
+}
+
+/* Responsive aanpassing voor mobiel */
+@media (max-width: 768px) {
+  .logo {
+    max-width: 50%;    /* kleiner op smalle schermen */
+  }
+}
 
