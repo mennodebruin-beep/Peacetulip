@@ -59,25 +59,22 @@ th {
 tr:nth-child(even) {
   background-color: #f9f9f9;
 }
-.logo {
-  max-width: 200px;   /* pas dit aan naar gewenste grootte */
-  height: auto;
-  display: block;
-  margin: 0 auto;     /* centreert het logo horizontaal */
-}
-@media (max-width: 600px) {
-  .logo {
-    max-width: 150px;
-  }
-}
-/* Logo in sidebar */
-.logo {
-  max-width: 90%;      /* logo past zich aan aan kolombreedte */
+/* Sidebar logo */
+.sidebar img.logo {
+  max-width: 90%;      /* past zich aan aan de sidebar */
   min-width: 80px;     /* nooit kleiner dan 80px */
   height: auto;        /* behoudt verhoudingen */
-  display: block;      
-  margin: 0 auto 20px; /* centreert en geeft wat ruimte eronder */
+  display: block;
+  margin: 0 auto 20px; /* centreren + ruimte onder logo */
 }
+
+/* Mobiel */
+@media (max-width: 768px) {
+  .sidebar img.logo {
+    max-width: 50%;   /* logo schaalt kleiner op mobiel */
+  }
+}
+
 
 /* Responsive aanpassing voor mobiel */
 @media (max-width: 768px) {
