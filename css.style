@@ -1,7 +1,61 @@
-/* Logo styling */
+/* Basis */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 20%;
+}
+
 .logo {
-  max-width: 200px;   /* pas dit aan naar gewenste grootte */
-  height: auto;
-  display: block;
-  margin: 0 auto;     /* centreert het logo horizontaal */
+  text-align: center;
+  margin: 20px 0;
+}
+
+.logo img {
+  width: 120px;
+}
+
+/* Hoofdinhoud */
+.main-content {
+  margin-left: 20%;
+}
+
+.page-header h1 {
+  margin: 0;
+}
+
+/* Lijsten */
+.values-list {
+  margin-left: 20px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 0.9em;
+}
+
+.footer img {
+  width: 120px;
+  margin-top: 10px;
+}
+table, th, td {
+  border: 1px solid #ddd; /* Dunne, grijze randen */
+  border-collapse: collapse; /* Randen laten overlappen */
+}
+th, td {
+  padding: 8px; /* Ruimte binnen de cel */
+  text-align: left; /* Tekst links uitlijnen */
+}
+th {
+  background-color: #f2f2f2; /* Lichtgrijze achtergrond voor koppen */
+  font-weight: bold;
+}
+/* Alternerende rijkleuren voor betere leesbaarheid */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
 }
